@@ -1,0 +1,65 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5 to server version: 5.0.24-community-nt
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> create database banksys
+    -> ;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use banksys;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table customer(name varchar(20), accno int (6),email varchar(25),balance int(10));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc customer;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| name    | varchar(20) | YES  |     | NULL    |       |
+| accno   | int(6)      | YES  |     | NULL    |       |
+| email   | varchar(25) | YES  |     | NULL    |       |
+| balance | int(10)     | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> select * from customer;
+Empty set (0.00 sec)
+
+mysql> insert into customer values(Ansh,100001,ansh@gmail.com,10000);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com,10000)' at line 1
+mysql> insert into customer values('Ansh',100001,'ansh@gmail.com',10000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values('Ayush',100002,'ayush@gmail.com',9000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Harsh',100003,'harsh@gmail.com',9000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Atharv',100004,'atharv@gmail.com',10000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values('Aditya',100005,'adi@gmail.com',10000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Rohan',100006,'rohan@gmail.com',11000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Rahul',100007,'rahul@gmail.com',8000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Mohit',100008,'mohit@gmail.com',8000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Gourav',100009,'gourav@gmail.com',9500);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customer values('Yash',100010,'yash@gmail.com',10500);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>
